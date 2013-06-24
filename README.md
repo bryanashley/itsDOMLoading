@@ -14,6 +14,8 @@ Add Triggers like so
       console.log(this, "was added to the page, it has a class of test");
     });
 
+The callback defined accepts the added node as "this" as a jQuery object.
+
 ## Dependencies
 itsDOMLoading requires jQuery for selector matching.
 
