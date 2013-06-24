@@ -2,7 +2,7 @@
 itsDOMLoading uses a Mutation Observer to allow for setting defined callbacks for specific selectors. This allows you to execute code whenever a specified element is added to the dom
 
 ## Usage
-Currently itsDOMLoading is set to listen to the body, future versions will allow for changing the scope of the observer. To initialize itsDOMLoading, simply call listenFor with a selector and its callback as shown.
+Currently itsDOMLoading is set to listen to the body, future versions will allow for changing the scope of the observer. To initialize itsDOMLoading, simply call itsDOMLoading.listen() when the page is loaded and define the triggers as shown.
 
 On Page Load
 
