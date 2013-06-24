@@ -16,7 +16,7 @@ var itsDOMLoading = {
                 $.each(mutation.addedNodes, function(index, node){
                     for(key in itsDOMLoading.triggers){
                         if($(node).is(key)){
-                            itsDOMLoading.triggers[key].call(node);
+                            itsDOMLoading.triggers[key].call($(node));
                         }
                     }
                 });
