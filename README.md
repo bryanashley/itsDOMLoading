@@ -5,9 +5,11 @@ itsDOMLoading uses a Mutation Observer to allow for setting defined callbacks fo
 Currently itsDOMLoading is set to listen to the body, future versions will allow for changing the scope of the observer. To initialize itsDOMLoading, simply call listenFor with a selector and its callback as shown.
 
 On Page Load
+
     itsDOMLoading.listen();
 
 Add Triggers like so 
+
     itsDOMLoading.addTrigger(".test", function(){
       console.log(this, "was added to the page, it has a class of test");
     });
