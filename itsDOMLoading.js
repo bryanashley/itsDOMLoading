@@ -1,7 +1,7 @@
 window.itsDOMLoading = (function() {
 
     var itsDOMLoading = {
-        version: "0.2b",
+        version: "0.3",
         triggers: {},
         observer: null,
         scope: "body",
