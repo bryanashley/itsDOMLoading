@@ -6,7 +6,7 @@ window.itsDOMLoading = (function() {
         observer: null,
         scope: "body",
         selector: $ || function(selector, el) {
-            return (el || document).querySelectorAll(selector)
+            return (el || document).querySelectorAll(selector);
         },
 
         addTrigger: function(selector, callback){
@@ -20,8 +20,9 @@ window.itsDOMLoading = (function() {
                 mutations.forEach(function(mutation){
                     var added = [].slice.call(mutation.addedNodes, 0);
                     added.forEach(function(node){
-                        for(key in itsDOMLoading.triggers){
-                            if(matches(node, key)){
+                        for(var key in itsDOMLoading.triggers){
+                            if (itsDOMLoading.triggers.hasOwnProperty(key) &&
+                                    matches(node, key)){
                                 itsDOMLoading.triggers[key](node);
                             }
                         }
@@ -45,7 +46,7 @@ window.itsDOMLoading = (function() {
     };
 
     var query = function(selector, parent){
-        return [].slice.call(itsDOMLoading.selector(selector, parent), 0);
+        return [].slice.call(itsDOMLoading.selector(selector, parent) || [], 0);
     };
 
     return itsDOMLoading;
